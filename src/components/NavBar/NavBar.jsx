@@ -4,8 +4,8 @@ import { CiHeart } from "react-icons/ci";
 
 const NavBar = () => {
     return (
-       <div className="mx-8 mt-10 py-7  rounded-t-2xl bg-[#9538E2] ">
-         <div className=" max-w-7xl  mx-auto bg-[#9538E2] flex  justify-between items-center ">
+       <div className="w-[1540px] mx-auto mt-10 py-7  rounded-t-2xl bg-[#9538E2] ">
+         <div className=" max-w-7xl  mx-auto  flex  justify-between items-center ">
             <div>
                 <h3 className="text-xl font-bold text-white
                 ">Gadget Heaven</h3>
