@@ -1,8 +1,11 @@
+import Footer from "../Footer/Footer";
+import NavBar from "../NavBar/NavBar";
 
 const Root = () => {
     return (
-        <div>
-            <h2>hello world</h2>
+        <div className="">
+            <NavBar></NavBar>
+            <Footer></Footer>
         </div>
     );
 };
