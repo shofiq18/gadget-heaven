@@ -1,5 +1,6 @@
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiHeart } from "react-icons/ci";
+import { NavLink } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -12,7 +13,7 @@ const NavBar = () => {
             </div>
             <div>
                 <ul className="flex gap-12 text-white  text-base font-bold">
-                    <li>Home</li>
+                    <li><NavLink to="/">Home</NavLink></li>
                     <li>Statistics</li>
                     <li>Dashboard</li>
                 </ul>

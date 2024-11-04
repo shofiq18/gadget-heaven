@@ -1,0 +1,173 @@
+[
+    {
+      "product_id": "P001",
+      "product_title": "Apple iPhone 15 Pro Max",
+      "product_image": "https://example.com/iphone15promax.jpg",
+      "category": "Smartphones",
+      "price": 1299,
+      "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+      "specification": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Bionic chip",
+        "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+        "LiDAR Scanner",
+        "Up to 2TB storage"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://example.com/galaxys23ultra.jpg",
+      "category": "Smartphones",
+      "price": 1249,
+      "description": "The Galaxy S23 Ultra with a powerful camera and fast performance.",
+      "specification": [
+        "6.8-inch Dynamic AMOLED 2X display",
+        "Snapdragon 8 Gen 2 processor",
+        "Quad-camera system (200MP Main, 12MP Ultra-wide, 10MP Telephoto, 10MP Periscope)",
+        "S Pen support",
+        "Up to 1TB storage"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Google Pixel 7 Pro",
+      "product_image": "https://example.com/pixel7pro.jpg",
+      "category": "Smartphones",
+      "price": 899,
+      "description": "Google's Pixel 7 Pro with advanced AI features and excellent camera quality.",
+      "specification": [
+        "6.7-inch OLED display",
+        "Google Tensor G2 chip",
+        "Triple-camera system (50MP Main, 12MP Ultra-wide, 48MP Telephoto)",
+        "5G connectivity",
+        "Up to 512GB storage"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P004",
+      "product_title": "OnePlus 11",
+      "product_image": "https://example.com/oneplus11.jpg",
+      "category": "Smartphones",
+      "price": 749,
+      "description": "OnePlus 11 offers flagship performance with a stunning display.",
+      "specification": [
+        "6.7-inch AMOLED display",
+        "Snapdragon 8 Gen 2 processor",
+        "Triple-camera system (50MP Main, 48MP Ultra-wide, 32MP Telephoto)",
+        "80W fast charging",
+        "Up to 512GB storage"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Sony Xperia 1 IV",
+      "product_image": "https://example.com/xperia1iv.jpg",
+      "category": "Smartphones",
+      "price": 999,
+      "description": "Sony Xperia 1 IV with a 4K display and pro-grade camera capabilities.",
+      "specification": [
+        "6.5-inch 4K HDR OLED display",
+        "Snapdragon 8 Gen 1 processor",
+        "Triple-camera system (12MP each)",
+        "5G connectivity",
+        "Up to 512GB storage"
+      ],
+      "availability": false,
+      "rating": 4.4
+    },
+    {
+      "product_id": "P006",
+      "product_title": "Xiaomi 12 Pro",
+      "product_image": "https://example.com/xiaomi12pro.jpg",
+      "category": "Smartphones",
+      "price": 849,
+      "description": "Xiaomi's flagship with powerful performance and fast charging.",
+      "specification": [
+        "6.73-inch AMOLED display",
+        "Snapdragon 8 Gen 1 processor",
+        "Triple-camera system (50MP each)",
+        "120W fast charging",
+        "Up to 512GB storage"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "L001",
+      "product_title": "MacBook Pro 14-inch",
+      "product_image": "https://example.com/macbookpro14.jpg",
+      "category": "Laptops",
+      "price": 1999,
+      "description": "MacBook Pro with M1 Pro chip, ideal for creative professionals.",
+      "specification": [
+        "14.2-inch Liquid Retina XDR display",
+        "Apple M1 Pro chip",
+        "16GB to 32GB RAM options",
+        "Up to 2TB storage",
+        "17 hours battery life"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "L002",
+      "product_title": "Dell XPS 13",
+      "product_image": "https://example.com/dellxps13.jpg",
+      "category": "Laptops",
+      "price": 999,
+      "description": "Compact and powerful, Dell XPS 13 is a favorite among professionals.",
+      "specification": [
+        "13.4-inch FHD+ display",
+        "Intel Core i7 processor",
+        "16GB RAM",
+        "512GB SSD",
+        "12 hours battery life"
+      ],
+      "availability": false,
+      "rating": 4.7
+    },
+    {
+      "product_id": "S001",
+      "product_title": "Apple Watch Series 8",
+      "product_image": "https://example.com/applewatch8.jpg",
+      "category": "Smart Watches",
+      "price": 399,
+      "description": "Advanced health monitoring and fitness tracking with Apple Watch Series 8.",
+      "specification": [
+        "1.9-inch LTPO OLED display",
+        "Apple S8 chip",
+        "18 hours battery life",
+        "Water-resistant up to 50m",
+        "watchOS 9"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "S002",
+      "product_title": "Samsung Galaxy Watch5",
+      "product_image": "https://example.com/galaxywatch5.jpg",
+      "category": "Smart Watches",
+      "price": 279,
+      "description": "Durable and stylish Samsung Galaxy Watch5 with fitness tracking and ECG.",
+      "specification": [
+        "1.4-inch Super AMOLED display",
+        "Exynos W920 processor",
+        "40 hours battery life",
+        "Water-resistant up to 50m",
+        "Wear OS"
+      ],
+      "availability": true,
+      "rating": 4.5
+    }
+  ]
+  

@@ -10,22 +10,22 @@ const Footer = () => {
             <div className="divider py-6"></div>
             <footer className="footer  justify-evenly  px-8">
   <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Branding</a>
-    <a className="link link-hover">Design</a>
-    <a className="link link-hover">Marketing</a>
-    <a className="link link-hover">Advertisement</a>
+    <h6 className="footer text-black font-bold text-lg">Services</h6>
+    <a className="link link-hover">Product Support</a>
+    <a className="link link-hover">Order Tracking</a>
+    <a className="link link-hover">Shipping & Delivery</a>
+    <a className="link link-hover">Returns</a>
   </nav>
   <nav>
-    <h6 className="footer-title">Company</h6>
+    <h6 className="footer text-black font-bold text-lg">Company</h6>
     <a className="link link-hover">About us</a>
+    <a className="link link-hover">Careers</a>
     <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
+    
   </nav>
   <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Terms of use</a>
+    <h6 className="footer text-black font-bold text-lg">Legal</h6>
+    <a className="link link-hover">Terms of Service </a>
     <a className="link link-hover">Privacy policy</a>
     <a className="link link-hover">Cookie policy</a>
   </nav>
