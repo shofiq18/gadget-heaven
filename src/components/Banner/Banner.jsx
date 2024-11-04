@@ -9,7 +9,7 @@ const Banner = () => {
             <button className="bg-[#FFFFFF] px-8 py-3 rounded-full text-[#9538E2] text-xl font-bold">Shop Now</button>
         </div>
         
-            <div className="absolute pl-[215px] pt-[48px]">
+            <div className="absolute pl-[220px] pt-[48px]">
                 <img src={BannerPng} alt="banner image" className='w-[1062px] h-[563px] rounded-3xl ' />
             </div>
         
