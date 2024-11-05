@@ -16,7 +16,7 @@ const Gadget = ({ gadget }) => {
                 <span className="text-xl font-medium text-gray-500">Price: ${gadget.price}</span>
                 <br />
                 <Link to={`/gadget/${gadget.product_id}`}>
-                    <button className="text-[#9538E2] mt-4 border-2 border-fuchsia-500 bg-white px-5 py-2 rounded-full text-lg font-semibold">
+                    <button className="text-[#9538E2] mt-4 border-2 border-fuchsia-300 bg-white px-5 py-2 rounded-full text-lg font-semibold">
                         View Details
                     </button>
                 </Link>

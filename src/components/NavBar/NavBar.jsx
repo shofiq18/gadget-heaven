@@ -1,6 +1,6 @@
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CiHeart } from "react-icons/ci";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
     const location = useLocation();
@@ -18,7 +18,7 @@ const NavBar = () => {
                 <ul className="flex gap-12 text-base font-bold">
                     <li><NavLink to="/" className={isHomePage ? '' : 'text-black'}>Home</NavLink></li>
                     <li className={isHomePage ? '' : 'text-black'}>Statistics</li>
-                    <li className={isHomePage ? '' : 'text-black'}>Dashboard</li>
+                    <li><Link to="/dashboard" className={isHomePage ? '' : 'text-black'}>Dashboard</Link></li>
                 </ul>
             </div>
             <div className="flex items-center text-2xl gap-4">
@@ -35,3 +35,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
+

@@ -86,31 +86,31 @@ const Gadgets = () => {
         <div className="w-1/4">
           <div className="card card-compact bg-base-100 gap-6 py-8 px-6 w-[260px] mx-auto shadow-2xl">
             <button
-              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'All Products' ? 'bg-green-200 text-blue-700' : ''}`}
+              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'All Products' ? 'bg-green-500 text-white' : ''}`}
               onClick={() => handleCategoryClick('All Products')}
             >
               All Products
             </button>
             <button
-              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'Laptops' ? 'bg-green-200 text-blue-700' : ''}`}
+              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'Laptops' ? 'bg-green-500 text-white' : ''}`}
               onClick={() => handleCategoryClick('Laptops')}
             >
               Laptops
             </button>
             <button
-              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'Smartphones' ? 'bg-green-200 text-blue-700' : ''}`}
+              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'Smartphones' ? 'bg-green-500 text-white' : ''}`}
               onClick={() => handleCategoryClick('Smartphones')}
             >
               Smartphones
             </button>
             <button
-              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'Smart Watches' ? 'bg-green-200 text-blue-700' : ''}`}
+              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'Smart Watches' ? 'bg-green-500 text-white' : ''}`}
               onClick={() => handleCategoryClick('Smart Watches')}
             >
               Smart Watches
             </button>
             <button
-              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'Accessories' ? 'bg-green-200 text-blue-700': ''}`}
+              className={`bg-gray-100 px-6 py-3 rounded-full ${selectedCategory === 'Accessories' ? 'bg-green-500 text-white': ''}`}
               onClick={() => handleCategoryClick('Accessories')}
             >
               Accessories
@@ -125,7 +125,7 @@ const Gadgets = () => {
               <Gadget gadget={gadget} key={gadget.product_id} />
             ))
           ) : (
-            <div className="col-span-full text-center text-5xl text-black font-bold">
+            <div className="col-span-full h-[400px] flex justify-center items-center font-bold text-6xl text-black font-b">
               Data Not Available 
             </div>
           )}

@@ -11,6 +11,8 @@ import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import Home from './components/Home/Home.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import GadgetDetails from './components/GadgetDetails/GadgetDetails.jsx';
+import Cart from './components/Cart/Cart.jsx';
+import Wishlist from './components/Wishlist/Wishlist.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: 'dashboard', 
         element: <Dashboard></Dashboard>
+      },
+      {
+        path:'cart', 
+        element: <Cart></Cart>
+      },
+      {
+        path:'wishlist',
+        element: <Wishlist></Wishlist>
       }
     ]
   },

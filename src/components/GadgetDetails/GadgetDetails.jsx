@@ -11,10 +11,10 @@ const GadgetDetails = () => {
         <div className=" relative mb-[400px]  bg-[#9538E2]   ">
             <div className=" text-center h-[460px]  ">
                 <h3 className="text-3xl pt-8 mb-4 text-white font-bold">Product Details</h3>
-                <p className="text-base text-gray-300">Explore the latest gadgets that will take your experience to <br /> the next level. From smart devices to the coolest accessories, we have it all!</p>
+                <p className="text-base text-gray-300">Explore the latest gadgets that will take your experience to  the next level. From smart devices to <br /> the coolest accessories, we have it all!</p>
             </div>
             <div className=" absolute bg-white inset-x-0 top-1/2 transform translate-y-1/5    max-w-7xl mx-auto h-[560px]  p-8 rounded-3xl flex gap-8 shadow-2xl">
-                <div><img className="w-[550px] h-[503px] rounded-xl " src={gadget.product_image} alt="" /></div>
+                <div><img className="w-[550px] h-[503px] rounded-xl object-cover " src={gadget.product_image} alt="" /></div>
 
                 <div>
                     <h1 className="text-3xl font-bold mb-4">{gadget.product_title}</h1>
@@ -54,3 +54,6 @@ const GadgetDetails = () => {
 };
 
 export default GadgetDetails;
+
+
+
