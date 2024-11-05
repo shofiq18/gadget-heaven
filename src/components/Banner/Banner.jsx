@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import BannerPng from '../../../src/image/assets/banner.jpg'
 
 const Banner = () => {
@@ -6,7 +7,7 @@ const Banner = () => {
          <div className="max-w-7xl mx-auto  text-center">
             <h2 className="font-bold text-5xl text-white pt-12 mb-6">Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories</h2>
             <p className="text-base text-white mb-8">Explore the latest gadgets that will take your experience to the next level. From smart devices to <br /> the coolest accessories, we have it all!</p>
-            <button className="bg-[#FFFFFF] px-8 py-3 rounded-full text-[#9538E2] text-xl font-bold">Shop Now</button>
+            <Link to="/dashboard"><button className="bg-[#FFFFFF] px-8 py-3 rounded-full text-[#9538E2] text-xl font-bold">Shop Now</button></Link>
         </div>
         
             <div className="absolute pl-[220px] pt-[48px]">
