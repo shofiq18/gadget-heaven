@@ -1,4 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToStoredCartList } from "../../utility/addToDb";
+import { addToStoredWishList } from "../../utility/addToWishList";
+
 
 
 const GadgetDetails = () => {
@@ -6,6 +9,19 @@ const GadgetDetails = () => {
 
     const data = useLoaderData();
     const gadget = data.find(gadget => gadget.product_id === product_id)
+
+    // cart handle
+    const handleAddToCart = (id) => {
+        addToStoredCartList(id)
+    }
+
+
+    // wishlist handle
+
+
+    const handleAddToWishList = (id) => {
+        addToStoredWishList(id)
+    }
 
     return (
         <div className=" relative mb-[400px]  bg-[#9538E2]   ">
@@ -38,10 +54,10 @@ const GadgetDetails = () => {
                         <span className="text-gray-600 text-lg ml-2 ">{gadget.rating}</span>
                     </div>
                     <div className="flex  space-x-4 ">
-                        <button  className="px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700">
+                        <button onClick={() => handleAddToCart(product_id)}  className="px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700">
                             Add To Cart
                         </button>
-                        <button className="p-2 border rounded-full text-gray-600 hover:bg-gray-100">
+                        <button onClick={() => handleAddToWishList(product_id)} className="p-2 border rounded-full text-gray-600 hover:bg-gray-100">
                             ❤️
                         </button>
                     </div>
