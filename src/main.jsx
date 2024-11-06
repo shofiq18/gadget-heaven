@@ -13,6 +13,7 @@ import Dashboard from './components/Dashboard/Dashboard.jsx';
 import GadgetDetails from './components/GadgetDetails/GadgetDetails.jsx';
 import Cart from './components/Cart/Cart.jsx';
 import Wishlist from './components/Wishlist/Wishlist.jsx';
+import About from './components/About/About.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         path: 'dashboard', 
         element: <Dashboard></Dashboard>,
         loader: () => fetch('/GadgetData.json')
+      },
+      {
+        path:'about',
+        element:<About></About>
       },
       {
         path:'cart', 

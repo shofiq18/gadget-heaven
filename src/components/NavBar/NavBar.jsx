@@ -19,6 +19,7 @@ const NavBar = () => {
                     <li><NavLink to="/" className={isHomePage ? '' : 'text-black'}>Home</NavLink></li>
                     <li className={isHomePage ? '' : 'text-black'}>Statistics</li>
                     <li><Link to="/dashboard" className={isHomePage ? '' : 'text-black'}>Dashboard</Link></li>
+                    <li><Link to="/about" className={isHomePage ? '' : 'text-black'}>About Us</Link></li>
                 </ul>
             </div>
             <div className="flex items-center text-2xl gap-4">
