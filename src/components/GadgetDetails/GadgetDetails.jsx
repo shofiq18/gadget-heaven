@@ -8,6 +8,7 @@ const GadgetDetails = () => {
     const { product_id } = useParams();
 
     const data = useLoaderData();
+    console.log(data)
     const gadget = data.find(gadget => gadget.product_id === product_id)
 
     // cart handle

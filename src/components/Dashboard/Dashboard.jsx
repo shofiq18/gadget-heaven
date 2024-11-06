@@ -1,9 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
+import { useLoaderData } from "react-router-dom";
+import { getStoredCartList } from "../../utility/addToDb";
 
 const Dashboard = () => {
+
+    const allGadgets = useLoaderData();
+    console.log(allGadgets)
+
+    const [cartList, setCartList] = useState([]);
+    
     const [activeTab, setActiveTab] = useState("Tab1");
+
+    
+
+  useEffect(() => {
+    const storedCartList = getStoredCartList();
+    const storedCartListInt = storedCartList.map(id => parseInt(id));
+
+    console.log(storedCartListInt);
+
+    const addGadgetList = allGadgets.filter(gadget => storedCartListInt.includes(gadget.product_id));
+    setCartList(addGadgetList);
+
+}, [allGadgets]); // Added allGadgets to dependencies
+
 
     return (
         <div>
@@ -33,7 +55,7 @@ const Dashboard = () => {
             <div className="max-w-7xl mx-auto mt-10">
                 {/* Tab Content */}
                 <div className="mt-4 p-4  rounded-lg ">
-                    {activeTab === "Tab1" && <Cart />}
+                    {activeTab === "Tab1" &&  <Cart cartList={cartList}  />}
                     {activeTab === "Tab2" && <Wishlist />}
                 </div>
             </div>

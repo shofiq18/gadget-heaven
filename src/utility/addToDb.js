@@ -3,7 +3,7 @@
 const getStoredCartList = () => {
     const storedListStr = localStorage.getItem('cart-list');
     if(storedListStr){
-        const storedList = JSON.parse(storedListStr);
+        const storedList = JSON.stringify(storedListStr);
         return storedList;
     }else{
         return [];
@@ -12,20 +12,19 @@ const getStoredCartList = () => {
 }
 
 
-
-const addToStoredCartList = (id) => {
+const addToStoredCartList = (product_id) => {
     const storedList = getStoredCartList();
-    if(storedList.includes(id)){
-        console.log(id, 'already exists in the list')
+    if(storedList.includes(product_id)){
+        console.log(product_id, 'already exists in the list')
     }else{
-        storedList.push(id);
+        storedList.push(product_id);
         const storedListStr = JSON.stringify(storedList);
         localStorage.setItem('cart-list',  storedListStr);
     }
 
 }
 
-export {addToStoredCartList}
+export {addToStoredCartList, getStoredCartList}
 
 
 
