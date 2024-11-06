@@ -32,7 +32,7 @@ const Dashboard = () => {
             </div>
             <div className="max-w-7xl mx-auto mt-10">
                 {/* Tab Content */}
-                <div className="mt-4 p-4 bg-gray-50 rounded-lg shadow">
+                <div className="mt-4 p-4  rounded-lg ">
                     {activeTab === "Tab1" && <Cart />}
                     {activeTab === "Tab2" && <Wishlist />}
                 </div>
