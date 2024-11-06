@@ -5,21 +5,19 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredCartList } from "../../utility/addToDb";
 
 const Dashboard = () => {
-
-    const allGadgets = useLoaderData();
-    console.log(allGadgets)
-
     const [cartList, setCartList] = useState([]);
-    
+
+
+
     const [activeTab, setActiveTab] = useState("Tab1");
 
-    
+    const allGadgets = useLoaderData();
 
   useEffect(() => {
     const storedCartList = getStoredCartList();
     const storedCartListInt = storedCartList.map(id => parseInt(id));
 
-    console.log(storedCartListInt);
+    console.log(storedCartList, allGadgets, storedCartListInt);
 
     const addGadgetList = allGadgets.filter(gadget => storedCartListInt.includes(gadget.product_id));
     setCartList(addGadgetList);
