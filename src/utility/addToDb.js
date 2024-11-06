@@ -1,15 +1,6 @@
 // cart list
 
-const getStoredCartList = () => {
-    const storedListStr = localStorage.getItem('cart-list');
-    if(storedListStr){
-        const storedList = JSON.parse(storedListStr);
-        return storedList;
-    }else{
-        return [];
-    }
 
-}
 
 
 
@@ -25,7 +16,68 @@ const addToStoredCartList = (id) => {
 
 }
 
-export {addToStoredCartList, getStoredCartList}
+export {addToStoredCartList}
+
+// // Function to get the stored cart list from local storage
+// export const getStoredCartList = () => {
+//     const storedListStr = localStorage.getItem("cart-list");
+//     if (storedListStr) {
+//         const storedList = JSON.parse(storedListStr);
+//         return storedList;
+//     } else {
+//         return [];
+//     }
+// };
+
+// // Function to remove an item from the cart list in local storage
+// export const removeFromCartList = (productId) => {
+//     // Retrieve the current cart list from local storage
+//     const storedCartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+    
+//     // Filter out the item with the specified product ID
+//     const updatedCartList = storedCartList.filter(item => item.product_id !== productId);
+    
+//     // Update local storage with the new cart list
+//     localStorage.setItem("cart-list", JSON.stringify(updatedCartList));
+// };
+
+
+export const getStoredCartList = () => {
+    const storedListStr = localStorage.getItem("cart-list");
+    if (storedListStr) {
+        const storedList = JSON.parse(storedListStr);
+        return storedList;
+    } else {
+        return [];
+    }
+};
+
+// Function to remove an item from the cart list in local storage
+export const removeFromCartList = (productId) => {
+    // Retrieve the current cart list from local storage
+    const storedCartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+    
+    // Filter out the item with the specified product ID
+    const updatedCartList = storedCartList.filter(item => item.product_id !== productId);
+    
+    // Update local storage with the new cart list
+    localStorage.setItem("cart-list", JSON.stringify(updatedCartList));
+    
+    // Dispatch custom event to notify of update
+    window.dispatchEvent(new Event("cartListUpdated"));
+};
+
+// Optional function to add items to the cart list in local storage
+export const addToCartList = (item) => {
+    const storedCartList = getStoredCartList();
+    storedCartList.push(item);
+    localStorage.setItem("cart-list", JSON.stringify(storedCartList));
+    
+    // Dispatch custom event to notify of update
+    window.dispatchEvent(new Event("cartListUpdated"));
+    // window.dispatchEvent(new Event("cartListUpdated"));
+};
+
 
 
 

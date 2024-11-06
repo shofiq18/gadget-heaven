@@ -20,8 +20,8 @@ const GadgetDetails = () => {
     // wishlist handle
 
 
-    const handleAddToWishList = (id) => {
-        addToStoredWishList(id)
+    const handleAddToWishList = (product) => {
+        addToStoredWishList(product)
     }
 
     return (
@@ -55,7 +55,7 @@ const GadgetDetails = () => {
                         <span className="text-gray-600 text-lg ml-2 ">{gadget.rating}</span>
                     </div>
                     <div className="flex  space-x-4 ">
-                        <button onClick={() => handleAddToCart(product_id)}  className="px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700">
+                        <button onClick={() => handleAddToCart(gadget)}  className="px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700">
                             Add To Cart
                         </button>
                         <button onClick={() => handleAddToWishList(product_id)} className="p-2 border rounded-full text-gray-600 hover:bg-gray-100">
