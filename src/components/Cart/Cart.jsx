@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { MdDelete } from "react-icons/md";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { AiFillCheckCircle } from "react-icons/ai";
 import groupIcon from '../../../public/image/assets/Group.png'
 
 const Cart = ({ cartList, cartDelete, clearCart }) => {

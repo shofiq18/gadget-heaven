@@ -46,7 +46,7 @@ const Dashboard = () => {
             <div className="max-w-7xl mx-auto mt-10">
                 <div className="mt-4 p-4 rounded-lg">
                     {activeTab === "Tab1" && <Cart cartList={cartList} cartDelete={cartDelete} clearCart={clearCart}  />}
-                    {activeTab === "Tab2" && <Wishlist cartList={cartList} />}
+                    {activeTab === "Tab2" && <Wishlist cartList={cartList} cartDelete={cartDelete} />}
                 </div>
             </div>
         </div>

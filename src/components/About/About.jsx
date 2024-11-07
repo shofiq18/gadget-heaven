@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 
 
 const About = () => {
+
+    useEffect(() => {
+        document.title = "About | Gadget Heaven";
+        
+    }, []);
+
     return (
         <div className=" max-w-7xl mx-auto shadow p-6 my-16 rounded-2xl  bg-slate-300 flex flex-col md:flex-row items-center justify-center  space-y-8 md:space-y-0 md:space-x-8">
             <div className="md:w-1/2 w-full">
