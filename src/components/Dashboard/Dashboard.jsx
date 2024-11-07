@@ -7,6 +7,7 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredCartList, removeFromCartList, clearCart } from "../../utility/addToDb"; // Assuming removeFromCartList is a function that removes item from local storage
 import { toast } from "react-toastify";
 
+
 const Dashboard = () => {
     const [cartList, setCartList] = useState([]);
     const [activeTab, setActiveTab] = useState("Tab1");
@@ -14,6 +15,7 @@ const Dashboard = () => {
     const allGadgets = useLoaderData();
 
     useEffect(() => {
+        document.title = "Dashboard | Gadget Heaven";
         const storedCartList = getStoredCartList();
         setCartList(storedCartList);
     }, [allGadgets]);

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { MdDelete } from "react-icons/md";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { AiFillCheckCircle } from "react-icons/ai";
+import groupIcon from '../../../public/image/assets/Group.png'
 
 const Cart = ({ cartList, cartDelete, clearCart }) => {
     const [showModal, setShowModal] = useState(false); // State to control modal visibility
@@ -77,12 +79,15 @@ const Cart = ({ cartList, cartDelete, clearCart }) => {
 
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                        <h2 className="text-2xl font-bold mb-4">Purchase Successful!</h2>
-                        <p className="text-lg">Thank you for your purchase!</p>
+                    <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+                        
+                        <div className="flex justify-center mb-4"><img  src={groupIcon} alt="" /></div>
+                        <h2 className="text-2xl font-bold  border-b mb-4">Payment Successfully</h2>
+                        <p className="text-lg">Thanks for your Parchasing.</p>
+                        <span className=" text-base mt-4">Total: ${totalCost.toFixed(2)}</span> <br />
                         <button
                             onClick={closeModal}
-                            className="mt-6 px-4 py-2 bg-purple-500 text-white font-semibold rounded-full"
+                            className="mt-4 w-full py-2 bg-purple-500 text-white font-semibold rounded-full"
                         >
                             Close
                         </button>
