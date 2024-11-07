@@ -76,6 +76,7 @@ import Cart from "../Cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { useLoaderData } from "react-router-dom";
 import { getStoredCartList, removeFromCartList } from "../../utility/addToDb"; // Assuming removeFromCartList is a function that removes item from local storage
+import { toast } from "react-toastify";
 
 const Dashboard = () => {
     const [cartList, setCartList] = useState([]);
@@ -93,6 +94,7 @@ const Dashboard = () => {
         const updatedCartList = cartList.filter(item => item.product_id !== productId);
         setCartList(updatedCartList); // Update state to re-render
         removeFromCartList(productId); // Remove from local storage
+        toast.success('Removed successfully')
     };
     
     

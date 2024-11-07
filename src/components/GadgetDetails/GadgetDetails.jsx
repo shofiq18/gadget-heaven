@@ -4,6 +4,7 @@ import { addToStoredWishList } from "../../utility/addToWishList";
 
 
 
+
 const GadgetDetails = () => {
     const { product_id } = useParams();
 
@@ -14,6 +15,7 @@ const GadgetDetails = () => {
     // cart handle
     const handleAddToCart = (id) => {
         addToStoredCartList(id)
+        
     }
 
 

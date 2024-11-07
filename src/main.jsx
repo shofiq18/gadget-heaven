@@ -14,6 +14,10 @@ import GadgetDetails from './components/GadgetDetails/GadgetDetails.jsx';
 import Cart from './components/Cart/Cart.jsx';
 import Wishlist from './components/Wishlist/Wishlist.jsx';
 import About from './components/About/About.jsx';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,6 +60,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
      <RouterProvider router={router} />
+     <ToastContainer />
   </StrictMode>,
 )
  
