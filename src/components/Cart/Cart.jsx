@@ -1,13 +1,14 @@
-
-
 import React, { useState, useEffect } from "react";
 import { MdDelete } from "react-icons/md";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
-const Cart = ({ cartList, cartDelete }) => {
-    // State to manage the sorted list of cart items
+const Cart = ({ cartList, cartDelete, clearCart }) => {
+    const [showModal, setShowModal] = useState(false); // State to control modal visibility
     const [sortedCartList, setSortedCartList] = useState(cartList);
+    const navigate = useNavigate(); // Initialize navigate
 
-    // Calculate the total cost
+    // Calculate the total cost dynamically based on sortedCartList or cartList
     const totalCost = sortedCartList.reduce((total, gadget) => total + gadget.price, 0);
 
     // Effect to update sortedCartList whenever cartList changes
@@ -19,6 +20,17 @@ const Cart = ({ cartList, cartDelete }) => {
     const handleSortByPrice = () => {
         const sortedList = [...sortedCartList].sort((a, b) => b.price - a.price);
         setSortedCartList(sortedList);
+    };
+
+    const handlePurchase = () => {
+        clearCart(); // Clear the cart
+        setShowModal(true); // Show success modal
+        toast.success("Purchase successful!");
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+        navigate("/"); // Redirect to homepage without reloading
     };
 
     return (
@@ -33,7 +45,7 @@ const Cart = ({ cartList, cartDelete }) => {
                     >
                         Sort by Price
                     </button>
-                    <button className="text-purple-500 px-6 py-3 rounded-full border-purple-500 border font-semibold">Purchase</button>
+                    <button onClick={handlePurchase} className="text-purple-500 px-6 py-3 rounded-full border-purple-500 border font-semibold">Purchase</button>
                 </div>
             </div>
             {sortedCartList.length === 0 ? (
@@ -60,6 +72,21 @@ const Cart = ({ cartList, cartDelete }) => {
                             </div>
                         </div>
                     ))}
+                </div>
+            )}
+
+            {showModal && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                    <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                        <h2 className="text-2xl font-bold mb-4">Purchase Successful!</h2>
+                        <p className="text-lg">Thank you for your purchase!</p>
+                        <button
+                            onClick={closeModal}
+                            className="mt-6 px-4 py-2 bg-purple-500 text-white font-semibold rounded-full"
+                        >
+                            Close
+                        </button>
+                    </div>
                 </div>
             )}
         </div>

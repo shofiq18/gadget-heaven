@@ -23,6 +23,15 @@ export {addToStoredCartList}
 
 
 
+// Function to clear the entire cart list in local storage
+export const clearCart = () => {
+    localStorage.removeItem("cart-list"); // Remove the cart list from localStorage
+    window.dispatchEvent(new Event("cartListUpdated")); // Dispatch event to notify of update
+};
+
+
+
+
 export const getStoredCartList = () => {
     const storedListStr = localStorage.getItem("cart-list");
     if (storedListStr) {
