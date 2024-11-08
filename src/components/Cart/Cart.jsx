@@ -5,33 +5,33 @@ import { useNavigate } from "react-router-dom";
 import groupIcon from '../../../public/image/assets/Group.png'
 
 const Cart = ({ cartList, cartDelete, clearCart }) => {
-    const [showModal, setShowModal] = useState(false); // State to control modal visibility
+    const [showModal, setShowModal] = useState(false); 
     const [sortedCartList, setSortedCartList] = useState(cartList);
-    const navigate = useNavigate(); // Initialize navigate
+    const navigate = useNavigate(); 
 
-    // Calculate the total cost dynamically based on sortedCartList or cartList
+   
     const totalCost = sortedCartList.reduce((total, gadget) => total + gadget.price, 0);
 
-    // Effect to update sortedCartList whenever cartList changes
+    
     useEffect(() => {
         setSortedCartList(cartList);
     }, [cartList]);
 
-    // Function to sort by price in descending order
+    
     const handleSortByPrice = () => {
         const sortedList = [...sortedCartList].sort((a, b) => b.price - a.price);
         setSortedCartList(sortedList);
     };
 
     const handlePurchase = () => {
-        clearCart(); // Clear the cart
-        setShowModal(true); // Show success modal
+        clearCart(); 
+        setShowModal(true); 
         toast.success("Purchase successful!");
     };
 
     const closeModal = () => {
         setShowModal(false);
-        navigate("/"); // Redirect to homepage without reloading
+        navigate("/"); 
     };
 
     return (
@@ -42,11 +42,11 @@ const Cart = ({ cartList, cartDelete, clearCart }) => {
                     <span className="font-bold text-2xl mr-2">Total cost: ${totalCost.toFixed(2)}</span>
                     <button
                         onClick={handleSortByPrice}
-                        className="text-purple-500 px-6 py-3 rounded-full border-purple-500 border font-semibold"
+                        className="text-purple-500 px-6 py-3 rounded-full border-purple-500 border font-semibold active:bg-purple-400"
                     >
                         Sort by Price
                     </button>
-                    <button onClick={handlePurchase} className="text-purple-500 px-6 py-3 rounded-full border-purple-500 border font-semibold">Purchase</button>
+                    <button onClick={handlePurchase} className="text-purple-500 px-6 py-3 rounded-full border-purple-500 border font-semibold active:bg-purple-400">Purchase</button>
                 </div>
             </div>
             {sortedCartList.length === 0 ? (

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { useLoaderData } from "react-router-dom";
-import { getStoredCartList, removeFromCartList, clearCart } from "../../utility/addToDb"; // Assuming removeFromCartList is a function that removes item from local storage
+import { getStoredCartList, removeFromCartList, clearCart } from "../../utility/addToDb"; 
 import { toast } from "react-toastify";
 
 
@@ -20,11 +20,11 @@ const Dashboard = () => {
         setCartList(storedCartList);
     }, [allGadgets]);
 
-    // Delete item from cart and update state and local storage
+   
     const cartDelete = (productId) => {
         const updatedCartList = cartList.filter(item => item.product_id !== productId);
-        setCartList(updatedCartList); // Update state to re-render
-        removeFromCartList(productId); // Remove from local storage
+        setCartList(updatedCartList); 
+        removeFromCartList(productId); 
         toast.success('Removed successfully')
     };
     

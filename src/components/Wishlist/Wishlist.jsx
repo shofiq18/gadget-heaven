@@ -5,15 +5,13 @@ import { MdDelete } from "react-icons/md";
 
 
 
-const Wishlist = ({cartList,cartDelete}) => {
-    console.log(">>>>>>>>>>>>>>>",cartList);
+const Wishlist = ({cartList, cartDelete}) => {
+    
     
     return (
         <div>
-            <h3 className="font-bold text-2xl">WishList{cartList?.length}</h3>
-            <div className="bg-gray-50 p-4 rounded-xl mt-8 shadow">
-                <h1 className="text-2xl font-bold">Wishlist products </h1>
-            </div>
+            <h3 className="font-bold text-2xl">WishList</h3>
+           
             {cartList.length === 0 ? (
                 <p>Your cart list is empty</p>
             ) : (
