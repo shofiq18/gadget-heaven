@@ -17,7 +17,7 @@ const Cart = ({ cartList, cartDelete, clearCart }) => {
         setSortedCartList(cartList);
     }, [cartList]);
 
-    
+    // handle sort by price
     const handleSortByPrice = () => {
         const sortedList = [...sortedCartList].sort((a, b) => b.price - a.price);
         setSortedCartList(sortedList);
